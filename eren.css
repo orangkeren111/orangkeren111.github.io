@@ -1,0 +1,60 @@
+* { padding: 0; margin: 0; } 
+#game { position: absolute; width: 100%; height: 200px; top: 30%; margin: auto; } 
+.land { position: absolute; width: 100%; background-image: url(pngkey.com-walls-png-4229906.png); 
+    bottom: 0%;
+    height: 200px; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin: auto;} 
+#eren { width: 70px; height: 70px;
+    background-image: url(eren.png); background-size: auto 70px; 
+    position: relative; 
+    left: 300px;
+    top: 143px; 
+}
+#titan { width: 450px; height: 500px;
+    background-image: url(titan-png.png); background-size: auto auto; 
+    position: absolute; 
+    left: 200px;
+    top: 0px; 
+    animation: titan-move 1s infinite linear;
+}
+@keyframes titan-move {
+    0%{top:0px}
+    50%{top:10px;}
+    100%{top:0px}
+}
+#point{
+    position: absolute;
+    left: 47vw;
+}
+.jump { animation: jump 0.5s linear; } 
+@keyframes jump {
+    0% { top: 143px;
+    } 15%{top: 119px; 
+    } 30% { top: 96px; 
+    } 45% { top: 73px; 
+    } 55% { top: 50px; 
+    } 60% { top: 73px; 
+    } 75% { top: 96px; 
+    } 90% { top: 119px; 
+    } 100% { top: 143px; } } 
+#enemy {
+    width: 80px; height: 80px; position: absolute; top: 140px; left: 580px; 
+    background-image: url(titan.png); background-size:80px 80px; 
+    animation: enemy-block 3s infinite linear; } 
+@keyframes
+    enemy-block { 0% { left: 1500px; } 100% { left: -20px; } }
+#levi {
+    width: 70px; height: 70px; position: absolute; top: 0px;
+    background-image: url(levi.png); background-size:70px 70px; 
+    animation: levi-attack 10s infinite linear; } 
+@keyframes
+    levi-attack { 0% { left: 5000px; } 50% { left: -5000px; } 100% { left: -5000px; } }
+#wall {
+    width: 100px; height: 100px; position: relative;
+    background-image: url(wall-titan.png); background-size:100px 100px; 
+    top: 20%;
+    animation: wall-block 8s infinite linear; } 
+@keyframes
+    wall-block { 0% { left: 1500px; } 100% { left: -50px; } }
